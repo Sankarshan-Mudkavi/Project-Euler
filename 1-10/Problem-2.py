@@ -1,3 +1,4 @@
+#This should be self explanatory
 def fib(n):
 	fib_list = []
 	fib_list.append(1)
