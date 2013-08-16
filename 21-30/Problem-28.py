@@ -12,7 +12,7 @@ What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed 
 
 #Couldn't resist using list comprehensions
 def spiral_gen(l_bound, h_bound): 
-	return [(lengths, range(lengths**2, (lengths - 2)**2, - 1)) for lengths in range(l_bound, h_bound + 1, 2)]
+	return [(lengths, range(lengths**2, (lengths - 2)**2, -1)) for lengths in range(l_bound, h_bound + 1, 2)]
 
 def diag_sum(l_bound, h_bound):
 	spiral_list = spiral_gen(l_bound, h_bound)
