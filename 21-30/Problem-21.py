@@ -5,6 +5,9 @@ Evaluate the sum of all the amicable numbers under 10000."""
 
 def sum_div(num):
 	div_sum = 0
+
+	#One-liner: return reduce(lambda x, y: x + y, [facts for facts in range(1, int(num/2) + 1) if num % facts == 0], 0)
+	
 	for facts in range(1, int(num/2) + 1):
 		if num % facts == 0:
 			div_sum += facts
@@ -19,10 +22,12 @@ def num_dict_gen(bound):
 def amic_pairs(bound):
 	amic_numset = set()
 	factsum_dict = num_dict_gen(bound)
+
+	#Using set comprehensions: return sum({keys for keys in factsum_dict if sum_div(factsum_dict[keys]) == keys and keys != factsum_dict[keys]})
+	
 	for keys in factsum_dict:
 		if sum_div(factsum_dict[keys]) == keys and keys != factsum_dict[keys]:
 			amic_numset.add(keys)
-			amic_numset.add(factsum_dict[keys])
 	return sum(amic_numset)
 
 print amic_pairs(10000)
