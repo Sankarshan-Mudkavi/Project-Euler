@@ -7,9 +7,9 @@ def sum_div(num):
 	div_sum = 0
 
 	#One-liner: return reduce(lambda x, y: x + y, [facts for facts in range(1, int(num/2) + 1) if num % facts == 0], 0)
-	
+
 	for facts in range(1, int(num/2) + 1):
-		if num % facts == 0:
+		if num % facts == 0: 
 			div_sum += facts
 	return div_sum
 
