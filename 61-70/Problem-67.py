@@ -1,3 +1,4 @@
+#Rather than calculate all routes, calculate the highest sum for each row from the bottom
 tree_list = [[59],
 [73, 41],
 [52, 40, 9],
